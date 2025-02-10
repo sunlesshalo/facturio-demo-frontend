@@ -1,0 +1,8 @@
+Flask
+stripe
+requests
+base64
+json
+os
+datetime
+replit
