@@ -11,37 +11,37 @@ function HeroSection() {
                 <div className="col-span-1 px-2 lg:px-0">
                     <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
                         <h1 className="relative w-fit tracking-tighter text-balance font-bold !leading-tight text-gray-900 text-5xl md:text-6xl">
-                            Your tagline here for your cool product
+                            Automate Your Stripe Invoicing with Ease
                         </h1>
 
                         <p className="mt-8 text-balance text-lg max-w-prose text-center font-semibold lg:pr-10 md:text-wrap lg:text-left">
-                            This is a great place to describe your product and what it does. This is a great place to describe your product and what it does.
+                            Connect your Stripe payments to Smartbill invoicing for seamless, error-free billing. Say goodbye to tedious manual tasks and hello to a streamlined financial workflow.
                         </p>
 
                         <ul className="hidden mt-8 text-left font-medium md:flex flex-col items-center sm:items-start">
                             <div className="space-y-2">
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-5 w-5 shrink-0 text-green-600" />
-                                    Good reason one
+                                    Eliminate Manual Errors
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-5 w-5 shrink-0 text-green-600" />
-                                    Good reason two
+                                    Save Time
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-5 w-5 shrink-0 text-green-600" />
-                                    Good reason three
+                                    Streamline Integration
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-5 w-5 shrink-0 text-green-600" />
-                                    Good reason four
+                                    Boost Confidence
                                 </li>
                             </div>
                         </ul>
 
                         {/* CTA button */}
                         <Link href='#' className={cn(buttonVariants({ size: 'lg' }), "flex items-center justify-center mt-8 group")}>
-                            <span>Start Now</span>
+                            <span>Test it Now</span>
                             <ArrowRight className='ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1' />
                         </Link>
 

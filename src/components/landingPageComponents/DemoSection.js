@@ -1,22 +1,24 @@
-"use client";
+"use client"
 import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 
 function DemoSection() {
-  // Form state
   const [smartbillUsername, setSmartbillUsername] = useState('');
   const [smartbillToken, setSmartbillToken] = useState('');
   const [taxNumber, setTaxNumber] = useState('');
-
-  // State for API responses
   const [invoiceSeries, setInvoiceSeries] = useState([]);
   const [selectedSeries, setSelectedSeries] = useState('');
-  const [message, setMessage] = useState('');
+  const [demoId, setDemoId] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Handler for retrieving invoice series
+  const stripeTestPage = "https://buy.stripe.com/test_fZe0102nF4tn4x2cMN";
+
   const handleGetSeries = async (e) => {
     e.preventDefault();
-    setMessage('');
+    setIsLoading(true);
+    setErrorMessage('');
+
     try {
       const res = await fetch('/api/get-series', {
         method: 'POST',
@@ -27,25 +29,39 @@ function DemoSection() {
           tax_number: taxNumber,
         }),
       });
+
       const data = await res.json();
       if (res.ok && data.success) {
-        setInvoiceSeries(data.invoice_series);
+        const series = data.invoice_series;
+        setDemoId(data.demo_id);
+
+        if (series.length === 1) {
+          window.open(stripeTestPage, '_blank');
+          setInvoiceSeries([]);
+          setSelectedSeries('');
+        } else if (series.length > 1) {
+          setInvoiceSeries(series);
+        }
       } else {
-        setMessage(data.error || 'Error retrieving series');
+        setErrorMessage(data.error || 'Error retrieving series');
       }
     } catch (error) {
       console.error(error);
-      setMessage('Network error');
+      setErrorMessage('Network error');
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  // Handler for saving the selected invoice series
-  const handleSaveSelection = async () => {
+  const handleRunTest = async () => {
     if (!selectedSeries) {
-      setMessage('Please select a series.');
+      setErrorMessage('Please select an invoice series.');
       return;
     }
-    setMessage('');
+
+    setIsLoading(true);
+    setErrorMessage('');
+
     try {
       const res = await fetch('/api/save-selection', {
         method: 'POST',
@@ -55,94 +71,136 @@ function DemoSection() {
           smartbill_token: smartbillToken,
           tax_number: taxNumber,
           selected_series: selectedSeries,
+          demo_id: demoId,
         }),
       });
+
       const data = await res.json();
       if (res.ok && data.success) {
-        setMessage(data.message);
+        window.open(stripeTestPage, '_blank');
+        setInvoiceSeries([]);
+        setSelectedSeries('');
       } else {
-        setMessage(data.error || 'Error saving selection');
+        setErrorMessage(data.error || 'Error saving selection');
       }
     } catch (error) {
       console.error(error);
-      setMessage('Network error');
+      setErrorMessage('Network error');
+    } finally {
+      setIsLoading(false);
     }
   };
+
+  const isRunTestEnabled = invoiceSeries.length === 1 || 
+    (invoiceSeries.length > 1 && selectedSeries !== '');
 
   return (
     <section className="bg-white/80 py-20">
       <div className="w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto flex flex-col items-center text-gray-700">
         <h1 className="font-bold text-3xl text-center">Demo Section</h1>
+
         <img
           src="/users/john.png"
           alt="user"
           className="inline-block pointer-events-none h-24 w-24 rounded-full my-10"
         />
+
         <p className="max-w-prose w-fit text-center font-semibold leading-relaxed">
-          <span className="font-bold">Your story goes here</span> – Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam optio omnis animi voluptatem modi! Distinctio dolorum ad aliquam temporibus quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, facere.
+          <span className="font-bold">Your story goes here</span> – Lorem ipsum dolor sit amet, 
+          consectetur adipisicing elit. Aperiam optio omnis animi voluptatem modi! 
+          Distinctio dolorum ad aliquam temporibus quo. Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Praesentium, facere.
         </p>
 
-        {/* Place the demo form exactly where the placeholder was */}
         <div className="my-20 scroll-mt-28 w-full" id="demo">
           <div className="w-full lg:w-4/5 lg:mx-auto h-auto shadow-md bg-gray-200 rounded-xl p-8">
-            <form onSubmit={handleGetSeries} className="w-full max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="SmartBill Username (Email)"
-                value={smartbillUsername}
-                onChange={(e) => setSmartbillUsername(e.target.value)}
-                className="w-full p-3 border rounded mb-4"
-                required
-              />
-              <input
-                type="password"
-                placeholder="SmartBill Token"
-                value={smartbillToken}
-                onChange={(e) => setSmartbillToken(e.target.value)}
-                className="w-full p-3 border rounded mb-4"
-                required
-              />
-              <input
-                type="text"
-                placeholder="Tax Number (CIF)"
-                value={taxNumber}
-                onChange={(e) => setTaxNumber(e.target.value)}
-                className="w-full p-3 border rounded mb-4"
-                required
-              />
-              <button
-                type="submit"
-                className="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700"
-              >
-                Get Invoice Series
-              </button>
-            </form>
+            <form onSubmit={handleGetSeries} className="w-full max-w-md mx-auto space-y-6">
+              {/* Form Inputs */}
+              <div className="space-y-4">
+                <input
+                  type="email"
+                  placeholder="SmartBill Username (Email)"
+                  value={smartbillUsername}
+                  onChange={(e) => setSmartbillUsername(e.target.value)}
+                  className="w-full p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white"
+                  required
+                  disabled={isLoading}
+                />
 
-            {invoiceSeries.length > 0 && (
-              <div className="w-full max-w-md mx-auto my-4">
-                <label className="block mb-2 font-semibold">Select an Invoice Series</label>
-                <select
-                  value={selectedSeries}
-                  onChange={(e) => setSelectedSeries(e.target.value)}
-                  className="w-full p-3 border rounded mb-4"
-                >
-                  <option value="">-- Choose a series --</option>
-                  {invoiceSeries.map((series, index) => (
-                    <option key={index} value={series.name}>
-                      {series.name}
-                    </option>
-                  ))}
-                </select>
+                <input
+                  type="password"
+                  placeholder="SmartBill Token"
+                  value={smartbillToken}
+                  onChange={(e) => setSmartbillToken(e.target.value)}
+                  className="w-full p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white"
+                  required
+                  disabled={isLoading}
+                />
+
+                <input
+                  type="text"
+                  placeholder="Tax Number (CIF)"
+                  value={taxNumber}
+                  onChange={(e) => setTaxNumber(e.target.value)}
+                  className="w-full p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white"
+                  required
+                  disabled={isLoading}
+                />
+              </div>
+
+              {/* Series Selection Dropdown */}
+              {invoiceSeries.length > 1 && (
+                <div className="space-y-2">
+                  <label className="block font-semibold">Select an Invoice Series</label>
+                  <select
+                    value={selectedSeries}
+                    onChange={(e) => setSelectedSeries(e.target.value)}
+                    className="w-full p-3 border rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none bg-white"
+                    disabled={isLoading}
+                  >
+                    <option value="">-- Choose a series --</option>
+                    {invoiceSeries.map((series, index) => (
+                      <option key={index} value={series.name}>
+                        {series.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              )}
+
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <button
-                  onClick={handleSaveSelection}
-                  className="px-6 py-3 bg-green-600 text-white rounded hover:bg-green-700"
+                  type="submit"
+                  disabled={isLoading}
+                  className={`px-6 py-3 rounded font-medium transition-colors ${
+                    isLoading
+                      ? 'bg-blue-400 cursor-not-allowed'
+                      : 'bg-blue-600 hover:bg-blue-700'
+                  } text-white`}
                 >
-                  Save Selection
+                  {isLoading ? 'Connecting...' : 'Connect to SmartBill'}
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleRunTest}
+                  disabled={!isRunTestEnabled || isLoading}
+                  className={`px-6 py-3 rounded font-medium transition-colors ${
+                    isRunTestEnabled && !isLoading
+                      ? 'bg-green-600 hover:bg-green-700 cursor-pointer'
+                      : 'bg-gray-400 cursor-not-allowed'
+                  } text-white`}
+                >
+                  {isLoading ? 'Processing...' : 'Run Test'}
                 </button>
               </div>
-            )}
 
-            {message && <p className="mt-4 text-center text-red-500">{message}</p>}
+              {/* Error Message */}
+              {errorMessage && (
+                <p className="text-center text-red-500 font-medium">{errorMessage}</p>
+              )}
+            </form>
           </div>
         </div>
 
@@ -151,7 +209,7 @@ function DemoSection() {
         </div>
 
         <div className="font-medium text-center text-2xl text-gray-600 hover:text-gray-800 cursor-pointer">
-          Try it now
+          Buy it Now
         </div>
       </div>
     </section>
