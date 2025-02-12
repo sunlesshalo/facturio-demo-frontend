@@ -3,7 +3,7 @@ from flask import Blueprint, request, jsonify
 import stripe
 from logging_config import logger
 from services.smartbill_service import process_stripe_session_event
-from helpers.tracking import track_usage
+from helpers.tracking import increment_metric, track_usage
 from config import STRIPE_WEBHOOK_SECRET
 from helpers.idempotency import is_event_processed, mark_event_processed, cleanup_processed_events
 
