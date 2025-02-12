@@ -1,7 +1,7 @@
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
-      const response = await fetch('https://facturio-011-alpha-demo-setup-ferencz1.replit.app:8080/get-series', {
+      const response = await fetch('https://facturio-demo-backend-ferencz1.replit.app/get-series', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(req.body),
