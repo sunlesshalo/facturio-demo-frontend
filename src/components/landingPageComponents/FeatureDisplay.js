@@ -2,7 +2,7 @@ import { Sparkle, } from 'lucide-react';
 
 function FeatureDisplay() {
     return (
-        <section className="bg-slate-50 py-24 pb-16">
+        <section className="bg-gradient-to-br from-customLightPurple/50 via-customPurple/50 to-customBlue/50 py-20">
             <div className='max-w-sm sm:max-w-2xl lg:max-w-3xl mx-auto flex flex-col gap-4'>
                 <h2 className='tracking-tight font-bold text-center md:text-left text-3xl lg:text-5xl lg:leading-[3.5rem]'>
                     All you need to do is connect your Stripe and SmartBill accounts.

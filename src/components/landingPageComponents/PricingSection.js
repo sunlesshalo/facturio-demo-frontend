@@ -1,197 +1,72 @@
-'use client'
-import { Building2, CircleCheck } from "lucide-react"
-import MaxWidthWrapper from "../MaxWidthWrapper"
-import Link from "next/link"
+"use client";
+import MaxWidthWrapper from '../MaxWidthWrapper';
+import { useState } from 'react';
+import EarlyAdopterModal from './EarlyAdopterModal'; // Ensure the path is correct
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '@/components/ui/button';
 
-function PricingSection() {
-    return (
-        <section className="bg-[#F8F9FA]" id="pricing">
-            <MaxWidthWrapper className='py-20'>
-                <div className="flex flex-col items-center justify-center">
-                    <div className="bg-primary/10 rounded-full px-4 py-2">
-                        <p className='text-primary text-xs font-medium tracking-wide'>Early Adopter Program</p>
-                    </div>
+function EarlyAdopterSection() {
+  // Define state for controlling the modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-                    <div className="max-w-lg text-center mt-4">
-                        <p className="text-[#6B7989] text-lg">
-                            Join our exclusive Early Adopter Program and get a customized instance of Facturio tailored to your specific invoicing needs. For a one-time fee of 50 EUR, you'll secure lifetime access at a steep discount compared to future pricing. With only 10 spots available, each participant receives personalized setup and dedicated support—including custom rules to manage multiple invoice series (e.g., RO for local and EXT for international payments). Your feedback is invaluable, shaping Facturio into a tool that perfectly meets your business requirements. Become a pioneer and streamline your billing process today!
-                        </p>
-                    </div>
-                </div>
+  // Handler for modal submission (customize as needed)
+  const handleEarlyAdopterSubmit = ({ name, email }) => {
+    // Process the submission (e.g., send data to your backend)
+    alert(`Thank you ${name}! We will be in touch.`);
+    setIsModalOpen(false);
+  };
 
-                {/* price chart
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-7 my-4 md:my-10 text-[#293A51]">
-                    {/* free plan 
-                    <div className="bg-white p-8 rounded-xl shadow-sm mt-14">
-                        <h3 className='text-2xl font-bold mb-4 text-center'>Free</h3>
+  return (
+    <section
+      id="early-adopter"
+      className="bg-gradient-to-br from-customLightPurple/50 via-customPurple/50 to-customBlue/50 py-20"
+    >
+      <MaxWidthWrapper>
+        <div className="flex flex-col items-center">
+          <h2 className="text-black text-3xl font-bold leading-relaxed mb-6">
+            Early Adopter Program
+          </h2>
+          <div className="max-w-3xl text-center bg-white p-6 shadow-lg rounded-lg">
+            <p className="text-[#6B7989] text-lg leading-relaxed">
+              Join our exclusive <span className="font-bold">Early Adopter Program</span> and get a{' '}
+              <span className="font-bold">customized instance of Facturio</span> tailored to your
+              specific invoicing needs. For a <span className="font-bold">one-time fee of 250 RON</span>,
+              you'll secure lifetime access at a steep discount compared to future pricing. With{' '}
+              <span className="font-bold">only 10 spots available</span>, each participant receives
+              personalized setup and dedicated support—including custom rules to manage multiple invoice
+              series (e.g., RO for local and EXT for international payments).{' '}
+              <span className="font-bold">Become a pioneer and streamline your billing process today!</span>
+            </p>
+            <div className="flex justify-center mt-8">
+              <div className="flex justify-center mt-8">
+                <button
+                  onClick={() => window.open("https://buy.stripe.com/14k14lfLY03V7Cg4gs", "_blank")}
+                  className={cn(buttonVariants({ size: 'lg' }), "flex items-center justify-center group")}
+                >
+                  <span>Claim Your Spot</span>
+                  <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+              </div>
+            </div>
+            <p className="text-xs text-gray-500 mt-4 text-center">
+              Disclaimer: Clicking this button will redirect you to a secure Stripe payment page where you can purchase your Early Adopter spot. Once your payment is processed, you'll be guided through a simple setup process to launch your Facturio instance.
+            </p>
 
-                        <p className='font-bold mb-6 text-center'>
-                            <span className='text-6xl'>$0 </span><span className='text-xs text-[#6B7989]'>/ month</span>
-                        </p>
-
-                        <p className="text-center font-bold text-[#6B7989]">
-                            Perfect for Lorem ipsum dolor sit amet.
-                        </p>
-
-                        <div className="bg-[#F8F9FA] w-full py-2 rounded-sm flex items-center justify-center font-medium my-4">
-                            <p className="text-xs text-[#6B7989]">
-                                Access to basic features
-                            </p>
-                        </div>
-
-                        <div className="px-6">
-                            <Link href='/'
-                                className='flex items-center justify-center cursor-pointer border-2 border-primary px-5 py-[0.45rem] rounded-full hover:bg-primary hover:text-white font-medium text-primary transition-colors duration-200 ease-out'
-                            >
-                                Start for Free
-                            </Link>
-                        </div>
-
-                        <p className="font-medium mt-6 mb-4">
-                            Basic features included
-                        </p>
-
-
-                        <ul className="text-left text-[#6B7989] font-medium space-y-4 mb-8">
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Basic stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Basic stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Basic stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Basic stuff
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* pro plan
-                    <div className="relative bg-white p-4 md:p-8 rounded-xl shadow-sm border-2 md:border-4 border-primary">
-                        <div className="absolute top-[-1rem] left-1/2 transform -translate-x-1/2 bg-primary text-white px-3 py-1 rounded-full text-sm font-semibold">
-                            Popular
-                        </div>
-                        <h3 className='text-2xl font-bold mb-4 text-center'>Pro</h3>
-
-                        <p className='font-bold mb-6 text-center'>
-                            <span className='text-6xl'>$999 </span><span className='text-xs text-[#6B7989]'>/ yearly</span>
-                        </p>
-
-                        <p className="text-center font-bold text-primary">
-                            Ideal for Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        </p>
-
-                        <div className="bg-[#F8F9FA] w-full py-2 rounded-sm flex items-center justify-center font-medium my-4">
-                            <p className="text-xs text-[#6B7989]">
-                                Full access to advanced features
-                            </p>
-                        </div>
-
-                        <div className="px-6 mb-6">
-                            <div
-                                className='flex items-center justify-center cursor-pointer px-5 py-[0.5rem] rounded-full bg-primary hover:bg-primary/90 font-medium text-white transition-colors duration-200 ease-out'
-                            >
-                                Subscribe now
-                            </div>
-                        </div>
-
-                        <ul className="text-left text-[#6B7989] font-medium space-y-4 mb-8">
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                <span className="font-bold text-[#293A51]">Unlimited</span> daily uses
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Premium stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Premium stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Premium stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Premium stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Premium stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                Premium stuff
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* enterprise plan 
-                    <div className="bg-white p-8 rounded-xl shadow-sm mt-14">
-                        <h3 className='text-2xl font-bold text-center'>Enterprise</h3>
-                        <div className="bg-[#F8F9FA] rounded-full w-20 h-20 flex items-center justify-center mx-auto my-7">
-                            <Building2 className="h-8 w-8 text-[#6B7989]" />
-                        </div>
-
-
-                        <p className="text-center font-bold text-[#6B7989]">
-                            Tailored to Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-
-                        <div className="bg-[#F8F9FA] w-full py-2 px-6 rounded-sm flex items-center justify-center font-medium my-4">
-                            <p className="text-xs text-[#6B7989] text-center">
-                                Full access to all features, including exclusive enterprise tools
-                            </p>
-                        </div>
-
-                        <div className="px-6">
-                            <div
-                                className='flex items-center justify-center cursor-pointer border-2 border-primary px-5 py-[0.45rem] rounded-full hover:bg-primary hover:text-white font-medium text-primary transition-colors duration-200 ease-out'
-                            >
-                                Contact Us
-                            </div>
-                        </div>
-
-                        <p className="font-medium mt-6 mb-4">
-                            Everything in Pro, plus
-                        </p>
-
-
-                        <ul className="text-left text-[#6B7989] font-medium space-y-4 mb-8">
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                <span className="font-bold text-[#293A51]">Custom</span> stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                High-end stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                High-end stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                High-end stuff
-                            </li>
-                            <li className="flex gap-1.5 items-center text-left">
-                                <CircleCheck className="h-5 w-5 shrink-0 fill-[#39BAF6] text-white" />
-                                High-end stuff
-                            </li>
-                        </ul>
-                    </div>
-                </div> 
-                end of three-option pricing table */}
-            </MaxWidthWrapper>
-        </section>
-    )
+          </div>
+        </div>
+      </MaxWidthWrapper>
+      {/* Conditionally render the EarlyAdopterModal */}
+      {isModalOpen && (
+        <EarlyAdopterModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          onSubmit={handleEarlyAdopterSubmit}
+        />
+      )}
+    </section>
+  );
 }
 
-export default PricingSection
+export default EarlyAdopterSection;

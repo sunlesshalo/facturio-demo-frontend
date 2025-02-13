@@ -35,7 +35,7 @@ function FaqSection() {
         },
         {
             question: "What’s the cost to get started?",
-            answer: "Join our early adopter program for a one-time fee of 50 EUR for lifetime access."
+            answer: "Join our early adopter program for a one-time fee of 250 RON for lifetime access."
         },
     ];
 

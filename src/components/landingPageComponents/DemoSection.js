@@ -1,7 +1,10 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronDown } from 'lucide-react';
 import EarlyAdopterModal from "./EarlyAdopterModal";
+import { ArrowRight, Check, Star } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { buttonVariants } from '../ui/button';
 
 function DemoSection() {
   const [smartbillUsername, setSmartbillUsername] = useState('');
@@ -13,6 +16,7 @@ function DemoSection() {
   const [errorMessage, setErrorMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
 
   const stripeTestPage = "https://buy.stripe.com/test_fZe0102nF4tn4x2cMN";
 
@@ -107,7 +111,7 @@ function DemoSection() {
 
   return (
     <section className="bg-white/80 py-20">
-      <div className="w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto flex flex-col items-center text-gray-700">
+      <div id="about" className="w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto flex flex-col items-center text-gray-700">
         <h1 className="font-bold text-3xl text-center">Hi, I'm Ferencz</h1>
 
         <img
@@ -120,8 +124,8 @@ function DemoSection() {
           <span className="font-bold">I'm the creator of Facturio.</span> I built this tool out of frustration from manually generating invoices after every Stripe payment. What began as a personal fix evolved into a solution for busy professionals who need error-free, automated invoicing. I'm now inviting a select group of early adopters to help shape Facturio into an indispensable tool for their businesses.
         </p>
 
-        <div className="my-20 scroll-mt-28 w-full" id="demo">
-          <div className="w-full lg:w-4/5 lg:mx-auto h-auto shadow-md bg-gray-200 rounded-xl p-8">
+            <div id="demo" className="my-20 scroll-mt-28 w-full">
+          <div className="w-full lg:w-4/5 lg:mx-auto h-auto shadow-md bg-gradient-to-br from-customLightPurple via-customPurple to-customBlue rounded-xl p-8">
             {/* Instructions Accordion */}
             <details className="mb-8 bg-white rounded-lg">
               <summary className="cursor-pointer font-bold text-xl p-4 hover:bg-gray-50">
@@ -218,30 +222,34 @@ function DemoSection() {
                 </div>
               )}
 
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
                 <button
                   type="submit"
-                  disabled={isLoading}
-                  className={`px-6 py-3 rounded font-medium transition-colors ${
-                    isLoading ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
-                  } text-white flex-1 sm:flex-none`}
+                  disabled={isLoading || demoId !== ''}
+                  className={cn(
+                    buttonVariants({ size: 'lg' }),
+                    "group flex items-center justify-center",
+                    (isLoading || demoId !== '') && "opacity-50 cursor-not-allowed"
+                  )}
                 >
-                  {isLoading ? 'Connecting...' : 'Connect to SmartBill'}
+                  <span>{isLoading ? 'Connecting...' : 'Connect to SmartBill'}</span>
+                  <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
-
                 <button
                   type="button"
                   onClick={handleRunTest}
                   disabled={!isRunTestEnabled || isLoading}
-                  className={`px-6 py-3 rounded font-medium transition-colors ${
-                    isRunTestEnabled && !isLoading
-                      ? 'bg-green-600 hover:bg-green-700 cursor-pointer'
-                      : 'bg-gray-400 cursor-not-allowed'
-                  } text-white flex-1 sm:flex-none`}
+                  className={cn(
+                    buttonVariants({ size: 'lg' }),
+                    "flex items-center justify-center",
+                    (!isRunTestEnabled || isLoading) && "opacity-50 cursor-not-allowed"
+                  )}
                 >
-                  {isLoading ? 'Processing...' : 'Run Test'}
+                  <span>{isLoading ? 'Processing...' : 'Run Test'}</span>
                 </button>
               </div>
+
+
 
               {errorMessage && (
                 <p className="text-center text-red-500 font-medium">{errorMessage}</p>
@@ -255,12 +263,18 @@ function DemoSection() {
         </div>
 
         <button 
-          onClick={() => setIsModalOpen(true)}
+          onClick={() => window.open("https://buy.stripe.com/14k14lfLY03V7Cg4gs", "_blank")}
           className="font-medium text-2xl text-gray-600 hover:text-gray-800 cursor-pointer mt-8 underline"
         >
           Become an Early Adopter
         </button>
       </div>
+      <div className="max-w-sm mx-auto">
+        <p className="text-xs text-gray-500 mt-4 text-center">
+          Disclaimer: Clicking this button will redirect you to a secure Stripe payment page where you can purchase your Early Adopter spot. Once your payment is processed, you'll be guided through a simple setup process to launch your Facturio instance.
+        </p>
+      </div>
+
 
       <EarlyAdopterModal
         isOpen={isModalOpen}

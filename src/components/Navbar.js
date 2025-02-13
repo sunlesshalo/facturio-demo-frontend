@@ -15,11 +15,11 @@ function Navbar() {
                         </Link>
 
                         <div className="hidden md:flex items-center justify-center gap-8 lg:gap-14">
-                            <Link href='#pricing' className='font-semibold hover:underline hover:underline-offset-1'>
-                                Pricing
-                            </Link>
                             <Link href='#demo' className='font-semibold hover:underline hover:underline-offset-1'>
                                 Demo
+                            </Link>
+                            <Link href='#early-adopter' className='font-semibold hover:underline hover:underline-offset-1'>
+                                Early Adopter Program
                             </Link>
                             <Link href='#faq' className='font-semibold hover:underline hover:underline-offset-1'>
                                 FAQ
@@ -36,9 +36,9 @@ function Navbar() {
                     </div>
 
                     <div className='hidden md:flex items-center space-x-1.5'>
-                        <Link href='/' className={cn(buttonVariants({ size: "sm" }), "flex items-center justify-center group px-4")}>
-                            <span>Try Demo</span>
-                            <ArrowRight className='ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1' />
+                        <Link href="#demo" className={cn(buttonVariants({ size: 'lg' }), "flex items-center justify-center group")}>
+                          <span>Try Demo</span>
+                          <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
                     </div>
                 </div>

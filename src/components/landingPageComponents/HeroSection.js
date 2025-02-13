@@ -39,9 +39,15 @@ function HeroSection() {
                             </div>
                         </ul>
 
-                        <Link href='#' className={cn(buttonVariants({ size: 'lg' }), "flex items-center justify-center mt-8 group")}>
-                            <span>Experience the Demo</span>
-                            <ArrowRight className='ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1' />
+                        <Link 
+                          href="#demo" 
+                          className={cn(
+                            buttonVariants({ size: 'lg' }),
+                            "flex items-center justify-center group mt-8" // add mt-8 (or another value) here
+                          )}
+                        >
+                          <span>Experience the Demo</span>
+                          <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
                     </div>
                 </div>
