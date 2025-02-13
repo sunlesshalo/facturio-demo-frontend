@@ -10,32 +10,32 @@ import { ChevronRight } from 'lucide-react';
 function FaqSection() {
     const faqs = [
         {
-            question: "Lorem ipsum dolor sit amet?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus, nunc at malesuada facilisis, odio tortor pretium nisl, id tincidunt purus arcu eu quam. Integer nec libero sed augue tincidunt aliquet."
+            question: "How does Facturio work?",
+            answer: "It automatically monitors your Stripe account and converts every payment into a compliant SmartBill invoice."
         },
         {
-            question: "Quisque vehicula justo nec?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo non nulla suscipit viverra. Ut commodo, orci a aliquet venenatis, ligula urna consequat nulla, in malesuada mauris odio id quam."
+            question: "Do I need technical expertise to use it?",
+            answer: "Not at all—simply connect your accounts and let Facturio handle the rest."
         },
         {
-            question: "Pellentesque habitant morbi tristique?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis orci nec nunc tempus interdum. Nulla facilisi. Suspendisse potenti. Vivamus vel felis nec orci pulvinar hendrerit. Curabitur ac felis in libero scelerisque."
+            question: "Is my data secure?",
+            answer: "Absolutely—Facturio leverages the robust security features of both Stripe and SmartBill."
         },
         {
-            question: "Vestibulum ante ipsum primis?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac justo eget lorem suscipit tempor. Curabitur a urna non eros porttitor tincidunt. Donec gravida, mauris et porttitor gravida, nulla nisi viverra ligula, id faucibus magna est vel nulla."
+            question: "Can it email invoices to my clients?",
+            answer: "Yes, Facturio can directly email invoices once they’re generated."
         },
         {
-            question: "Nam at nisi vitae erat?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod leo eu libero faucibus, id pharetra metus venenatis. Phasellus nec diam a massa fermentum pellentesque. Vivamus suscipit, urna nec varius cursus, quam urna aliquet urna, eget sollicitudin nisi turpis non enim."
+            question: "Who benefits from using Facturio?",
+            answer: "Freelancers, small business owners, SaaS companies, and digital agencies using Stripe and SmartBill."
         },
         {
-            question: "Nam at nisi vitae erat?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod leo eu libero faucibus, id pharetra metus venenatis. Phasellus nec diam a massa fermentum pellentesque. Vivamus suscipit, urna nec varius cursus, quam urna aliquet urna, eget sollicitudin nisi turpis non enim."
+            question: "What if I have multiple invoice series?",
+            answer: "You can easily select your preferred series during setup—Facturio will use it consistently."
         },
         {
-            question: "Nam at nisi vitae erat?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis euismod leo eu libero faucibus, id pharetra metus venenatis. Phasellus nec diam a massa fermentum pellentesque. Vivamus suscipit, urna nec varius cursus, quam urna aliquet urna, eget sollicitudin nisi turpis non enim."
+            question: "What’s the cost to get started?",
+            answer: "Join our early adopter program for a one-time fee of 50 EUR for lifetime access."
         },
     ];
 

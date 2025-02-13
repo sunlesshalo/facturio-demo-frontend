@@ -13,16 +13,16 @@ function FinalPush() {
                         <span className='absolute top-[-20px] right-0'>
                             <IoIosRocket className='h-10 w-10 text-sky-900' />
                         </span>
-                        Take your business to the next level
+                        Transform Your Billing Today—Experience Automation That Empowers Your Business!
                     </h2>
 
                     <p className='text-lg font-medium leading-relaxed text-gray-700'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, facere, excepturi id suscipit provident voluptatum placeat, delectus necessitatibus molestias tempore inventore accusamus expedita quae. Deleniti quod incidunt asperiores cupiditate repudiandae.
+                        In today’s fast-paced market, every minute counts. Facturio eliminates the tedious, error-prone manual invoicing process, so you can focus on growing your business. With real-time, automated invoice creation and direct client delivery, you gain a competitive edge by saving time, ensuring compliance, and eliminating costly mistakes. Don’t let outdated methods slow you down—step into a future of effortless efficiency and true operational freedom.
                     </p>
 
                     <div className="w-full lg:w-1/4">
                         <Link href='/' className={cn(buttonVariants({ size: "lg" }), "flex items-center justify-center group px-4")}>
-                            <span>Start Now</span>
+                            <span>Claim Your Spot</span>
                             <ArrowRight className='ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1' />
                         </Link>
                     </div>

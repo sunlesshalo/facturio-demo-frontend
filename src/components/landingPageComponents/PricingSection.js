@@ -14,7 +14,7 @@ function PricingSection() {
 
                     <div className="max-w-lg text-center mt-4">
                         <p className="text-[#6B7989] text-lg">
-                            Choose Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Join our early adopter program for a one-time fee of 50 EUR—locking in lifetime access at a steep discount compared to the planned future price of 70–100 EUR. With only about 10 spots available, you’ll get a personalized setup tailored to your needs while helping shape the future of Facturio.
                         </p>
                     </div>
                 </div>

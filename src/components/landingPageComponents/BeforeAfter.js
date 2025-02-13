@@ -9,14 +9,14 @@ function BeforeAfter() {
                     <div className="flex items-center justify-center gap-1.5">
                         <X className='w-8 h-8 sm:w-6 sm:h-6 text-red-600' />
                         <h2 className='font-bold text-xl md:text-3xl text-center'>
-                            Insert reason for not using other bad alternatives
+                            Don’t waste time with error-prone, manual invoicing systems.
                         </h2>
                     </div>
 
                     <div className="flex items-center justify-center gap-1.5">
                         <Check className='w-8 h-8 sm:w-6 sm:h-6 text-green-600' />
                         <h2 className='font-bold text-xl md:text-3xl text-center text-balance'>
-                            Insert reason for why using your product is better
+                            Facturio transforms every Stripe payment into a compliant SmartBill invoice—automatically and flawlessly.
                         </h2>
                     </div>
                 </div>
@@ -29,19 +29,19 @@ function BeforeAfter() {
 
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    bad bad bad bad bad bad bad
+                                    You waste time and effort creating invoices from Stripe payments manually.
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    bad bad bad bad bad bad bad
+                                    Manual data entry breeds frequent errors and compliance headaches.
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    bad bad bad bad bad bad bad
+                                    Your billing process is a chaotic, time-sapping ordeal.
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    bad bad bad bad bad bad bad
+                                    Administrative tasks distract you from focusing on your core business.
                                 </li>
                             </div>
                         </ul>
@@ -54,19 +54,19 @@ function BeforeAfter() {
 
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    good good good good good
+                                    Invoicing becomes fully automated and instant.
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    good good good good good
+                                    Every Stripe payment is converted into a SmartBill invoice with precision.
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    good good good good good
+                                    Errors and compliance worries vanish from your workflow.
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    good good good good good
+                                    You gain extra time to focus on strategic growth and client relationships.
                                 </li>
                             </div>
                         </ul>

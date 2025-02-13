@@ -97,7 +97,7 @@ function DemoSection() {
   return (
     <section className="bg-white/80 py-20">
       <div className="w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto flex flex-col items-center text-gray-700">
-        <h1 className="font-bold text-3xl text-center">Demo Section</h1>
+        <h1 className="font-bold text-3xl text-center">Hi, I'm Ferencz</h1>
 
         <img
           src="/users/john.png"
@@ -106,10 +106,7 @@ function DemoSection() {
         />
 
         <p className="max-w-prose w-fit text-center font-semibold leading-relaxed">
-          <span className="font-bold">Your story goes here</span> – Lorem ipsum dolor sit amet, 
-          consectetur adipisicing elit. Aperiam optio omnis animi voluptatem modi! 
-          Distinctio dolorum ad aliquam temporibus quo. Lorem ipsum dolor sit amet 
-          consectetur adipisicing elit. Praesentium, facere.
+          <span className="font-bold"> I’m the creator of Facturio.</span> I built this tool out of frustration from manually generating invoices after every Stripe payment. What began as a personal fix evolved into a solution for busy professionals who need error-free, automated invoicing. I’m now inviting a select group of early adopters to help shape Facturio into an indispensable tool for their businesses. Every early adopter receives a customized instance, plus exclusive access to our guided demo that shows you exactly how your Stripe payments transform into SmartBill invoices in real time.
         </p>
 
         <div className="my-20 scroll-mt-28 w-full" id="demo">
@@ -209,7 +206,7 @@ function DemoSection() {
         </div>
 
         <div className="font-medium text-center text-2xl text-gray-600 hover:text-gray-800 cursor-pointer">
-          Buy it Now
+          Become an Early Adopter
         </div>
       </div>
     </section>
