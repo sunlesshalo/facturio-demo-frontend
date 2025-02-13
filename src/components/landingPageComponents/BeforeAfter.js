@@ -9,14 +9,14 @@ function BeforeAfter() {
                     <div className="flex items-center justify-center gap-1.5">
                         <X className='w-8 h-8 sm:w-6 sm:h-6 text-red-600' />
                         <h2 className='font-bold text-xl md:text-3xl text-center'>
-                            Don’t waste time with error-prone, manual invoicing systems.
+                            Avoid clunky, error-prone invoicing.
                         </h2>
                     </div>
 
                     <div className="flex items-center justify-center gap-1.5">
                         <Check className='w-8 h-8 sm:w-6 sm:h-6 text-green-600' />
                         <h2 className='font-bold text-xl md:text-3xl text-center text-balance'>
-                            Facturio transforms every Stripe payment into a compliant SmartBill invoice—automatically and flawlessly.
+                            Turn Stripe payments into flawless invoices.
                         </h2>
                     </div>
                 </div>
@@ -29,19 +29,19 @@ function BeforeAfter() {
 
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    You waste time and effort creating invoices from Stripe payments manually.
+                                    Endless manual invoicing
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    Manual data entry breeds frequent errors and compliance headaches.
+                                    Error-prone data entry
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    Your billing process is a chaotic, time-sapping ordeal.
+                                    Chaotic billing process
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    Administrative tasks distract you from focusing on your core business.
+                                    Distractions from core work
                                 </li>
                             </div>
                         </ul>
@@ -54,19 +54,20 @@ function BeforeAfter() {
 
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    Invoicing becomes fully automated and instant.
+                                    Fully automated stripe invoicing
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    Every Stripe payment is converted into a SmartBill invoice with precision.
+                                    Instant SmartBill conversion
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    Errors and compliance worries vanish from your workflow.
+                                    Error-free, compliant invoices
+
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    You gain extra time to focus on strategic growth and client relationships.
+                                    More time for what truly matters
                                 </li>
                             </div>
                         </ul>

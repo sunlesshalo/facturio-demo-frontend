@@ -39,44 +39,24 @@ function HeroSection() {
                             </div>
                         </ul>
 
-                        {/* CTA button */}
                         <Link href='#' className={cn(buttonVariants({ size: 'lg' }), "flex items-center justify-center mt-8 group")}>
-                            <span>Get Started Now</span>
+                            <span>Experience the Demo</span>
                             <ArrowRight className='ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1' />
                         </Link>
-
-                        {/* Start of the review section 
-                        <div className="mt-12 flex flex-col sm:flex-row sm:items-start items-center gap-5">
-                            <div className="flex -space-x-3">
-                                <img src="/users/user-1.png" alt="user image" className="select-none pointer-events-none inline-block h-10 w-10 rounded-full ring-2 ring-slate-200 bg-white" />
-                                <img src="/users/user-2.png" alt="user image" className="select-none pointer-events-none inline-block h-10 w-10 rounded-full ring-2 ring-slate-200 bg-white" />
-                                <img src="/users/user-3.png" alt="user image" className="select-none pointer-events-none inline-block h-10 w-10 rounded-full ring-2 ring-slate-200 bg-white" />
-                                <img src="/users/user-4.png" alt="user image" className="select-none pointer-events-none inline-block h-10 w-10 rounded-full ring-2 ring-slate-200 bg-white" />
-                                <img src="/users/user-5.png" alt="user image" className="select-none pointer-events-none inline-block h-10 w-10 rounded-full ring-2 ring-slate-200 bg-white" />
-                            </div>
-
-                            <div className="flex flex-col justify-between items-center sm:items-start">
-                                <div className="flex gap-1">
-                                    {Array(5).fill().map((_, i) => (
-                                        <Star key={i} className="h-4 w-4 text-yellow-500 fill-yellow-500" />
-                                    ))}
-                                </div>
-
-                                <p><span className="font-semibold">5000+</span> happy users</p>
-                            </div>
-                        </div>  
-                        End of the review section */}
                     </div>
                 </div>
 
                 <div className="col-span-full mt-14 md:mt-0 lg:col-span-1">
-                    <div className="w-full h-60 lg:h-full rounded-3xl bg-gray-200/80 flex items-center justify-center">
+                    <div className="relative w-full aspect-square lg:aspect-auto lg:h-full rounded-3xl bg-gray-200/80 overflow-hidden">
                         <img 
                             src="https://i.imgur.com/knVagH2.gif" 
                             alt="Animated Graphic" 
-                            className="w-full h-full object-cover rounded-3xl" 
+                            className="absolute inset-0 w-full h-full object-cover object-center rounded-3xl"
                         />
                     </div>
+                    <p className="mt-4 text-xs text-gray-500 text-center italic">
+                        Please note that Facturio is an independent solution and is not affiliated with, endorsed by, or supported by Stripe or SmartBill.
+                    </p>
                 </div>
             </MaxWidthWrapper>
         </section>

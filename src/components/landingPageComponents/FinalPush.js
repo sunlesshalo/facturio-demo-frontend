@@ -22,7 +22,7 @@ function FinalPush() {
 
                     <div className="w-full lg:w-1/4">
                         <Link href='/' className={cn(buttonVariants({ size: "lg" }), "flex items-center justify-center group px-4")}>
-                            <span>Claim Your Spot</span>
+                            <span>Join Early Adopter Program</span>
                             <ArrowRight className='ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1' />
                         </Link>
                     </div>

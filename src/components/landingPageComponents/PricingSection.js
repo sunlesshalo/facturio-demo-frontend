@@ -9,12 +9,12 @@ function PricingSection() {
             <MaxWidthWrapper className='py-20'>
                 <div className="flex flex-col items-center justify-center">
                     <div className="bg-primary/10 rounded-full px-4 py-2">
-                        <p className='text-primary text-xs font-medium tracking-wide'>PRICING</p>
+                        <p className='text-primary text-xs font-medium tracking-wide'>Early Adopter Program</p>
                     </div>
 
                     <div className="max-w-lg text-center mt-4">
                         <p className="text-[#6B7989] text-lg">
-                            Join our early adopter program for a one-time fee of 50 EUR—locking in lifetime access at a steep discount compared to the planned future price of 70–100 EUR. With only about 10 spots available, you’ll get a personalized setup tailored to your needs while helping shape the future of Facturio.
+                            Join our exclusive Early Adopter Program and get a customized instance of Facturio tailored to your specific invoicing needs. For a one-time fee of 50 EUR, you'll secure lifetime access at a steep discount compared to future pricing. With only 10 spots available, each participant receives personalized setup and dedicated support—including custom rules to manage multiple invoice series (e.g., RO for local and EXT for international payments). Your feedback is invaluable, shaping Facturio into a tool that perfectly meets your business requirements. Become a pioneer and streamline your billing process today!
                         </p>
                     </div>
                 </div>

@@ -26,12 +26,12 @@ function FaqSection() {
             answer: "Yes, Facturio can directly email invoices once they’re generated."
         },
         {
-            question: "Who benefits from using Facturio?",
-            answer: "Freelancers, small business owners, SaaS companies, and digital agencies using Stripe and SmartBill."
+            question: "Who can benefit from using Facturio?",
+            answer: "To benefit from Facturio, your business must be set up to accept payments via Stripe and be a SmartBill user with a Platinum subscription. The Platinum level is essential as it provides the API access and advanced features needed for Facturio to automate invoice creation and delivery effectively. If you’re not yet using SmartBill or if you're looking for a more integrated solution, we can also help guide you through setting up a complete system that ties together Stripe, SmartBill, and automated invoicing. Please note that Facturio is an independent solution and is not affiliated with, endorsed by, or supported by Stripe or SmartBill."
         },
         {
             question: "What if I have multiple invoice series?",
-            answer: "You can easily select your preferred series during setup—Facturio will use it consistently."
+            answer: "Every early adopter gets a custom instance of Facturio, tailored to your specific invoicing needs. We configure your app with personalized rules to handle multiple invoice series automatically—using, for example, the RO series for local clients and the EXT series for international payments. This ensures accuracy, compliance, and a seamless experience without any manual adjustments."
         },
         {
             question: "What’s the cost to get started?",
