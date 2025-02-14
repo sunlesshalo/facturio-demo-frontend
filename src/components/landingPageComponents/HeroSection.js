@@ -11,7 +11,7 @@ function HeroSection() {
                 <div className="col-span-1 px-2 lg:px-0">
                     <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
                         <h1 className="relative w-fit tracking-tighter text-balance font-bold !leading-tight text-gray-900 text-5xl md:text-6xl">
-                            Transformă plățile Stripe în facturi SmartBill—automatizat!
+                            Transformă-ți plățile Stripe în facturi SmartBill—automatizat!
                         </h1>
 
                         <p className="mt-8 text-balance text-lg max-w-prose text-center font-semibold lg:pr-10 md:text-wrap lg:text-left">
