@@ -13,11 +13,11 @@ function FinalPush() {
                         <span className='absolute top-[-20px] right-0'>
                             <IoIosRocket className='h-10 w-10 text-sky-900' />
                         </span>
-                        Transform Your Billing Today—Experience Automation That Empowers Your Business!
+                        Transformă-ți facturarea astăzi—experimentează automatizarea care îți optimizează afacerea!
                     </h2>
 
                     <p className='text-lg font-medium leading-relaxed text-gray-700'>
-                        In today’s fast-paced market, every minute counts. Facturio eliminates the tedious, error-prone manual invoicing process, so you can focus on growing your business. With real-time, automated invoice creation and direct client delivery, you gain a competitive edge by saving time, ensuring compliance, and eliminating costly mistakes. Don’t let outdated methods slow you down—step into a future of effortless efficiency and true operational freedom.
+                        Într-o piață dinamică, fiecare minut contează. Facturio elimină facturarea manuală, consumatoare de timp și predispusă la erori, astfel încât să te poți concentra pe dezvoltarea afacerii tale. Cu facturi generate automat în timp real și livrare directă către clienți, economisești timp, eviți greșelile costisitoare și te asiguri că rămâi conform cu reglementările. Nu lăsa procesele învechite să te încetinească—adoptă automatizarea și bucură-te de o facturare fără stres!
                     </p>
 
                     <div className="w-full lg:w-1/4">
@@ -26,15 +26,15 @@ function FinalPush() {
                         target="_blank"
                         className={cn(buttonVariants({ size: "lg" }), "flex items-center justify-center group px-4")}
                       >
-                        <span>Join Early Adopter Program</span>
+                        <span>Alătură-te programului Early Adopter</span>
                         <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </Link>
                     </div>
                     {/* Terms of Service Link */}
                     <p className="mt-4 text-sm text-gray-600">
-                        By joining the Early Adopter Program, you agree to our{' '}
+                        Prin aderarea la Programul Early Adopter, accepți Termenii și condițiile noastre.{' '}
                         <Link href="/terms-of-service" target="_blank" className="text-blue-600 hover:underline">
-                            Terms of Service
+                            Termeni și Condiții.
                         </Link>.
                     </p>
                     <p className="text-xs text-gray-500 mt-4 text-left">
