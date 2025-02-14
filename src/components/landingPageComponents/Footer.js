@@ -10,9 +10,9 @@ function Footer() {
         <div className="flex justify-center md:justify-start w-full md:w-1/3">
           <Link href="https://www.pinelines.eu/" className="flex">
             <img
-              src="/logo_pinelines_2.png"
+              src="/logo_pinelines_1.png"
               alt="Pine Lines Logo"
-              className="h-auto w-[250px] object-contain"
+              className="h-auto w-[200px] object-contain"
             />
           </Link>
         </div>
