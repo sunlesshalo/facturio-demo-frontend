@@ -30,6 +30,13 @@ function FinalPush() {
                         <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </Link>
                     </div>
+                    {/* Terms of Service Link */}
+                    <p className="mt-4 text-sm text-gray-600">
+                        By joining the Early Adopter Program, you agree to our{' '}
+                        <Link href="/terms-of-service" target="_blank" className="text-blue-600 hover:underline">
+                            Terms of Service
+                        </Link>.
+                    </p>
                     <p className="text-xs text-gray-500 mt-4 text-left">
                       Disclaimer: Clicking this button will redirect you to a secure Stripe payment page where you can purchase your Early Adopter spot. Once your payment is processed, you'll be guided through a simple setup process to launch your Facturio instance.
                     </p>

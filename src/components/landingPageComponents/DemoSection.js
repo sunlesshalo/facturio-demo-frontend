@@ -5,6 +5,7 @@ import EarlyAdopterModal from "./EarlyAdopterModal";
 import { ArrowRight, Check, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from '../ui/button';
+import Link from 'next/link';
 
 function DemoSection() {
   const [smartbillUsername, setSmartbillUsername] = useState('');
@@ -269,6 +270,13 @@ function DemoSection() {
           Become an Early Adopter
         </button>
       </div>
+      {/* Terms of Service Link */}
+      <p className="mt-4 text-sm text-gray-600 text-center">
+          By joining the Early Adopter Program, you agree to our{' '}
+          <Link href="/terms-of-service" target="_blank" className="text-blue-600 hover:underline">
+              Terms of Service
+          </Link>.
+      </p>
       <div className="max-w-sm mx-auto">
         <p className="text-xs text-gray-500 mt-4 text-center">
           Disclaimer: Clicking this button will redirect you to a secure Stripe payment page where you can purchase your Early Adopter spot. Once your payment is processed, you'll be guided through a simple setup process to launch your Facturio instance.

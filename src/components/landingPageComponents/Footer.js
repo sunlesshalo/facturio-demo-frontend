@@ -20,7 +20,7 @@ function Footer() {
         {/* Center Column - Business Info (Centered) */}
         <div className="flex flex-col text-center w-full md:w-1/3 md:items-center">
           <p className="text-gray-700 text-sm font-medium">
-            Facturio.app is a project by Pine Lines SRL, CUI: 40670956, Reg. Com. J12/662/2019
+            Facturio.app is brought to you by Pine Lines SRL, CUI: 40670956, Reg. Com. J12/662/2019
           </p>
           <small className="text-gray-700 mt-3"> {/* Increased margin from mt-1 to mt-3 */}
             &copy; {new Date().getFullYear()} PINE LINES - All rights reserved

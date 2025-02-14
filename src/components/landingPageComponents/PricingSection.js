@@ -39,6 +39,13 @@ function EarlyAdopterSection() {
               series (e.g., RO for local and EXT for international payments).{' '}
               <span className="font-bold">Become a pioneer and streamline your billing process today!</span>
             </p>
+            {/* Terms of Service Link */}
+            <p className="mt-4 text-sm text-gray-600">
+                By joining the Early Adopter Program, you agree to our{' '}
+                <Link href="/terms-of-service" target="_blank" className="text-blue-600 hover:underline">
+                    Terms of Service
+                </Link>.
+            </p>
             <div className="flex justify-center mt-8">
               <div className="flex justify-center mt-8">
                 <button
