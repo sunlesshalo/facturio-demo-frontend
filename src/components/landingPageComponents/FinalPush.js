@@ -38,7 +38,7 @@ function FinalPush() {
                         </Link>.
                     </p>
                     <p className="text-xs text-gray-500 mt-4 text-left">
-                      Disclaimer: Clicking this button will redirect you to a secure Stripe payment page where you can purchase your Early Adopter spot. Once your payment is processed, you'll be guided through a simple setup process to launch your Facturio instance.
+                        Apăsând butonul, vei fi redirecționat către o pagină Stripe securizată pentru achiziționarea accesului Early Adopter. După efectuarea plății, vei urma un proces simplu pentru lansarea instanței tale Facturio.
                     </p>
 
                 </div>

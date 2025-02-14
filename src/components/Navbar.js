@@ -19,13 +19,13 @@ function Navbar() {
                                 Demo
                             </Link>
                             <Link href='#early-adopter' className='font-semibold hover:underline hover:underline-offset-1'>
-                                Early Adopter Program
+                                Programul Early Adopter
                             </Link>
                             <Link href='#faq' className='font-semibold hover:underline hover:underline-offset-1'>
-                                FAQ
+                                Întrebări frecvente
                             </Link>
                             <Link href='#about' className='font-semibold hover:underline hover:underline-offset-1'>
-                                About
+                                Despre noi
                             </Link>
                         </div>
                     </div>
@@ -37,7 +37,7 @@ function Navbar() {
 
                     <div className='hidden md:flex items-center space-x-1.5'>
                         <Link href="#demo" className={cn(buttonVariants({ size: 'lg' }), "flex items-center justify-center group")}>
-                          <span>Try Demo</span>
+                          <span>Încearcă demoul</span>
                           <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
                     </div>

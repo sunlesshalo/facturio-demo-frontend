@@ -10,39 +10,39 @@ import { ChevronRight } from 'lucide-react';
 function FaqSection() {
     const faqs = [
         {
-            question: "How does Facturio work?",
-            answer: "It automatically monitors your Stripe account and converts every payment into a compliant SmartBill invoice."
+            question: "Cum funcționează Facturio?",
+            answer: "Facturio monitorizează automat contul tău de Stripe și convertește fiecare plată într-o factură SmartBill."
         },
         {
-            question: "Do I need technical expertise to use it?",
-            answer: "Not at all—simply connect your accounts and let Facturio handle the rest."
+            question: "Am nevoie de cunoștințe tehnice pentru a-l folosi?",
+            answer: "Deloc—conectezi conturile prin Facturio și automatizarea se ocupă de restul."
         },
         {
-            question: "Is my data secure?",
-            answer: "Absolutely—Facturio leverages the robust security features of both Stripe and SmartBill."
+            question: "Sunt în siguranță datele mele?",
+            answer: "Absolut—Facturio folosește caracteristicile de securitate avansate ale Stripe și SmartBill."
         },
         {
-            question: "Can it email invoices to my clients?",
-            answer: "Yes, Facturio can directly email invoices once they’re generated."
+            question: "Poate trimite facturile prin e-mail clienților mei?",
+            answer: "Da, Facturio poate trimite direct facturile generate."
         },
         {
-            question: "Who can benefit from using Facturio?",
-            answer: "To benefit from Facturio, your business must be set up to accept payments via Stripe and be a SmartBill user with a Platinum subscription. The Platinum level is essential as it provides the API access and advanced features needed for Facturio to automate invoice creation and delivery effectively. If you’re not yet using SmartBill or if you're looking for a more integrated solution, we can also help guide you through setting up a complete system that ties together Stripe, SmartBill, and automated invoicing. Please note that Facturio is an independent solution and is not affiliated with, endorsed by, or supported by Stripe or SmartBill."
+            question: "De ce am nevoie ca să pot folosi Facturio?",
+            answer: "Pentru a folosi Facturio, trebuie să ai un cont Stripe și să fii utilizator SmartBill cu abonament Platinum. Nivelul Platinum oferă acces API și funcții avansate necesare pentru automatizarea facturilor."
         },
         {
-            question: "What if I have multiple invoice series?",
-            answer: "Every early adopter gets a custom instance of Facturio, tailored to your specific invoicing needs. We configure your app with personalized rules to handle multiple invoice series automatically—using, for example, the RO series for local clients and the EXT series for international payments. This ensures accuracy, compliance, and a seamless experience without any manual adjustments."
+            question: "Ce se întâmplă dacă am mai multe serii de facturi?",
+            answer: "Fiecare utilizator early adopter primește o instanță personalizată Facturio, cu reguli pentru gestionarea automată a seriilor de facturi."
         },
         {
-            question: "What’s the cost to get started?",
-            answer: "Join our early adopter program for a one-time fee of 250 RON for lifetime access."
+            question: "Cât costă?",
+            answer: "O taxă unică de 250 RON pentru acces pe viață."
         },
     ];
 
     return (
         <section className="bg-white/80 py-20" id='faq'>
             <div className="max-w-sm sm:max-w-2xl mx-auto">
-                <h1 className="text-3xl font-bold text-center mb-12 capitalize">Frequently Asked Questions</h1>
+                <h1 className="text-3xl font-bold text-center mb-12 capitalize">Întrebări frecvente</h1>
 
                 <div className="space-y-4">
                     {faqs.map((faq, index) => {

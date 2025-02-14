@@ -113,7 +113,7 @@ function DemoSection() {
   return (
     <section className="bg-white/80 py-20">
       <div id="about" className="w-[90%] sm:max-w-2xl lg:max-w-3xl mx-auto flex flex-col items-center text-gray-700">
-        <h1 className="font-bold text-3xl text-center">Hi, I'm Ferencz</h1>
+        <h1 className="font-bold text-3xl text-center">Salut, sunt Ferencz</h1>
 
         <img
           src="/users/profil.jpg"
@@ -122,7 +122,7 @@ function DemoSection() {
         />
 
         <p className="max-w-prose w-fit text-center font-semibold leading-relaxed">
-          <span className="font-bold">I'm the creator of Facturio.</span> I built this tool out of frustration from manually generating invoices after every Stripe payment. What began as a personal fix evolved into a solution for busy professionals who need error-free, automated invoicing. I'm now inviting a select group of early adopters to help shape Facturio into an indispensable tool for their businesses.
+          <span className="font-bold">Eu am creat aplicația Facturio.</span> Am început dezvoltarea acestui app din frustrarea legată de crearea manuală a facturilor pentru fiecare plată Stripe. Ce a început ca o soluție personală s-a transformat rapid într-un instrument esențial pentru antreprenori ocupați, care doresc să se concentreze pe creșterea afacerii. Acum, invit un grup select de early adopters să se alăture și să ajute la perfecționarea acestui tool, astfel încât Facturio să devină partenerul tău de încredere în gestionarea facturării.
         </p>
 
             <div id="demo" className="my-20 scroll-mt-28 w-full">
@@ -130,44 +130,45 @@ function DemoSection() {
             {/* Instructions Accordion */}
             <details className="mb-8 bg-white rounded-lg">
               <summary className="cursor-pointer font-bold text-xl p-4 hover:bg-gray-50">
-                Try Our Demo
+                Încearcă demo-ul
               </summary>
               <div className="p-4 text-gray-700 text-sm leading-relaxed border-t">
-                <p className="font-semibold">Step-by-Step Demo Process</p>
-                <p className="mt-2"><span className="font-semibold">Connect Your SmartBill Account:</span></p>
+                <p className="font-semibold">Cum funcționează demo-ul?</p>
+                <p className="mt-2"><span className="font-semibold">Conectează-ți contul SmartBill:</span></p>
                 <ul className="list-disc pl-5">
-                  <li>Enter your SmartBill email (username), token, and Tax Number (CIF).</li>
-                  <li>Click "Connect to SmartBill" to securely link your account.</li>
+                  <li>Introduce numele tău de utilizator SmartBill (e-mail), token-ul și CUI-ul.</li>
+                  <li>Dă clic pe 'Conectare la SmartBill' pentru o conexiune securizată la contul tău SmartBill.</li>
                 </ul>
-                <p className="mt-2"><span className="font-semibold">Retrieve Invoice Series:</span></p>
+                <p className="mt-2"><span className="font-semibold">Preluare serii de facturi:</span></p>
                 <ul className="list-disc pl-5">
-                  <li>Facturio fetches your available invoice series.</li>
-                  <li>If there's only one series, you'll automatically be directed to the test payment page.</li>
-                  <li>If multiple series exist, choose the appropriate one from the dropdown.</li>
+                  <li>Facturio preia seriile de facturi disponibile.</li>
+                  <li>Dacă există o singură serie, vei fi direcționat automat către pagina test de plată.</li>
+                  <li>Dacă există mai multe serii, va trebui să alegi seria dorită din meniul derulant.
+</li>
                 </ul>
-                <p className="mt-2"><span className="font-semibold">Run the Test:</span></p>
+                <p className="mt-2"><span className="font-semibold">Executarea testului::</span></p>
                 <ul className="list-disc pl-5">
-                  <li>Click "Run Test" to trigger the demo.</li>
-                  <li>You'll be redirected to a Stripe test payment page (no real money is transferred).</li>
-                  <li>Make a test payment using:
+                  <li>Dă clic pe 'Execută test' pentru a porni demo-ul.</li>
+                  <li>Vei fi redirecționat către o pagină de plată test pe Stripe (nu se transferă bani reali).</li>
+                  <li>Fă o plată test folosind:
                     <ul className="list-disc pl-5">
-                      <li>Card Number: 4242 4242 4242 4242</li>
-                      <li>Expiration Date: A valid future date (e.g., 12/34)</li>
-                      <li>CVC: Any three-digit number (or four digits for American Express)</li>
-                      <li>Other Fields: Fill in with any values.</li>
+                      <li>Număr card: 4242 4242 4242 4242</li>
+                      <li>Date de expirare: O dată validă în viitor (e.g., 12/34)</li>
+                      <li>CVC: Orice număr de trei cifre </li>
+                      <li>Restul câmpurilor: Completează cu orice valori.</li>
                     </ul>
                   </li>
                 </ul>
-                <p className="mt-2"><span className="font-semibold">Check Your SmartBill Account:</span></p>
+                <p className="mt-2"><span className="font-semibold">Verifică-ți contul SmartBill::</span></p>
                 <ul className="list-disc pl-5">
-                  <li>After completing the test payment, visit your SmartBill account.</li>
-                  <li>Locate the draft invoice generated from the test Stripe payment.</li>
-                  <li>No worries—it won't be emailed or submitted to the eFactura system. Simply delete it if you wish.</li>
+                  <li>După finalizarea plății de test, accesează contul tău SmartBill.</li>
+                  <li>Uită-te la facturile emise și vei găsi factura ciornă aferentă plății de test.</li>
+                  <li>Nu-ți face griji — factura nu va fi trimisă prin e-mail sau prin sistemul eFactură. Poți s-o și ștergi dacă vrei.</li>
                 </ul>
-                <p className="mt-2"><span className="font-semibold">Data Safety Assurance:</span></p>
+                <p className="mt-2"><span className="font-semibold">Asigurarea siguranței datelor:</span></p>
                 <ul className="list-disc pl-5">
-                  <li>Your SmartBill credentials are used securely and only for the demo session.</li>
-                  <li>Experience a risk-free demonstration of Facturio's automated invoicing in action.</li>
+                  <li>Datele de acreditare SmartBill sunt utilizate în siguranță și doar pentru sesiunea demo.</li>
+                  <li>Așa poți testa în siguranță procesul automatizat de facturare al Facturio.</li>
                 </ul>
               </div>
             </details>
@@ -177,7 +178,7 @@ function DemoSection() {
               <div className="space-y-4">
                 <input
                   type="email"
-                  placeholder="SmartBill Username (Email)"
+                  placeholder="Nume de utilizator SmartBill (Email)"
                   value={smartbillUsername}
                   onChange={(e) => setSmartbillUsername(e.target.value)}
                   className="w-full p-3 border rounded bg-white focus:ring-2 focus:ring-blue-500 outline-none"
@@ -186,7 +187,7 @@ function DemoSection() {
                 />
                 <input
                   type="password"
-                  placeholder="SmartBill Token"
+                  placeholder="Token SmartBill"
                   value={smartbillToken}
                   onChange={(e) => setSmartbillToken(e.target.value)}
                   className="w-full p-3 border rounded bg-white focus:ring-2 focus:ring-blue-500 outline-none"
@@ -195,7 +196,7 @@ function DemoSection() {
                 />
                 <input
                   type="text"
-                  placeholder="Tax Number (CIF)"
+                  placeholder="CUI"
                   value={taxNumber}
                   onChange={(e) => setTaxNumber(e.target.value)}
                   className="w-full p-3 border rounded bg-white focus:ring-2 focus:ring-blue-500 outline-none"
@@ -206,14 +207,14 @@ function DemoSection() {
 
               {invoiceSeries.length > 1 && (
                 <div className="space-y-2">
-                  <label className="block font-semibold">Select an Invoice Series</label>
+                  <label className="block font-semibold">Selectează o serie:</label>
                   <select
                     value={selectedSeries}
                     onChange={(e) => setSelectedSeries(e.target.value)}
                     className="w-full p-3 border rounded bg-white focus:ring-2 focus:ring-blue-500 outline-none"
                     disabled={isLoading}
                   >
-                    <option value="">-- Choose a series --</option>
+                    <option value="">-- Selectează o serie --</option>
                     {invoiceSeries.map((series, index) => (
                       <option key={index} value={series.name}>
                         {series.name}
@@ -233,7 +234,7 @@ function DemoSection() {
                     (isLoading || demoId !== '') && "opacity-50 cursor-not-allowed"
                   )}
                 >
-                  <span>{isLoading ? 'Connecting...' : 'Connect to SmartBill'}</span>
+                  <span>{isLoading ? 'Conectare...' : 'Conectare la SmartBill'}</span>
                   <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
                 <button
@@ -246,7 +247,7 @@ function DemoSection() {
                     (!isRunTestEnabled || isLoading) && "opacity-50 cursor-not-allowed"
                   )}
                 >
-                  <span>{isLoading ? 'Processing...' : 'Run Test'}</span>
+                  <span>{isLoading ? 'Procesare...' : 'Execută test'}</span>
                 </button>
               </div>
 
@@ -267,19 +268,19 @@ function DemoSection() {
           onClick={() => window.open("https://buy.stripe.com/14k14lfLY03V7Cg4gs", "_blank")}
           className="font-medium text-2xl text-gray-600 hover:text-gray-800 cursor-pointer mt-8 underline"
         >
-          Become an Early Adopter
+          Devino Early Adopter
         </button>
       </div>
       {/* Terms of Service Link */}
       <p className="mt-4 text-sm text-gray-600 text-center">
-          By joining the Early Adopter Program, you agree to our{' '}
+        Prin aderarea la Programul Early Adopter, accepți Termenii și condițiile noastre.{' '}
           <Link href="/terms-of-service" target="_blank" className="text-blue-600 hover:underline">
-              Terms of Service
+              Termeni și condiții
           </Link>.
       </p>
       <div className="max-w-sm mx-auto">
         <p className="text-xs text-gray-500 mt-4 text-center">
-          Disclaimer: Clicking this button will redirect you to a secure Stripe payment page where you can purchase your Early Adopter spot. Once your payment is processed, you'll be guided through a simple setup process to launch your Facturio instance.
+          Apăsând butonul, vei fi redirecționat către o pagină Stripe securizată pentru achiziționarea accesului Early Adopter. După efectuarea plății, vei urma un proces simplu pentru lansarea instanței tale Facturio.
         </p>
       </div>
 

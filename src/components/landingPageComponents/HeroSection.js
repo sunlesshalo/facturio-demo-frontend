@@ -11,30 +11,30 @@ function HeroSection() {
                 <div className="col-span-1 px-2 lg:px-0">
                     <div className="relative mx-auto text-center lg:text-left flex flex-col items-center lg:items-start">
                         <h1 className="relative w-fit tracking-tighter text-balance font-bold !leading-tight text-gray-900 text-5xl md:text-6xl">
-                            Turn Stripe Payments into SmartBill Invoices—Instantly!
+                            Transformă plățile Stripe în facturi SmartBill—automatizat!
                         </h1>
 
                         <p className="mt-8 text-balance text-lg max-w-prose text-center font-semibold lg:pr-10 md:text-wrap lg:text-left">
-                            Seamless integration that automates invoicing, slashes errors, and frees up your valuable time.
+                            Integrare perfectă care automatizează facturarea, elimină erorile și îți oferă mai mult timp pentru ce contează.
                         </p>
 
                         <ul className="hidden mt-8 text-left font-medium md:flex flex-col items-center sm:items-start">
                             <div className="space-y-2">
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-5 w-5 shrink-0 text-green-600" />
-                                    Instant Invoice Creation
+                                    Facturare instantă
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-5 w-5 shrink-0 text-green-600" />
-                                    Error-Free Billing
+                                    Facturi fără eroare
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-5 w-5 shrink-0 text-green-600" />
-                                    Seamless Integration
+                                    Integrare perfectă
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-5 w-5 shrink-0 text-green-600" />
-                                    Time-Saving Automation
+                                    Eficiență sporită
                                 </li>
                             </div>
                         </ul>
@@ -46,7 +46,7 @@ function HeroSection() {
                             "flex items-center justify-center group mt-8" // add mt-8 (or another value) here
                           )}
                         >
-                          <span>Experience the Demo</span>
+                          <span>Încearcă demo-ul</span>
                           <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                         </Link>
                     </div>
@@ -61,7 +61,7 @@ function HeroSection() {
                         />
                     </div>
                     <p className="mt-4 text-xs text-gray-500 text-center italic">
-                        Please note that Facturio is an independent solution and is not affiliated with, endorsed by, or supported by Stripe or SmartBill.
+                        Facturio este o soluție independentă și nu este afiliată, aprobată sau susținută de Stripe sau SmartBill.
                     </p>
                 </div>
             </MaxWidthWrapper>

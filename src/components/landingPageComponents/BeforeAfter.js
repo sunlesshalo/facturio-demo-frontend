@@ -9,14 +9,14 @@ function BeforeAfter() {
                     <div className="flex items-center justify-center gap-1.5">
                         <X className='w-8 h-8 sm:w-6 sm:h-6 text-red-600' />
                         <h2 className='font-bold text-xl md:text-3xl text-center'>
-                            Avoid clunky, error-prone invoicing.
+                            Nu te mai stresezi cu facturi greșite sau uitate.
                         </h2>
                     </div>
 
                     <div className="flex items-center justify-center gap-1.5">
                         <Check className='w-8 h-8 sm:w-6 sm:h-6 text-green-600' />
                         <h2 className='font-bold text-xl md:text-3xl text-center text-balance'>
-                            Turn Stripe payments into flawless invoices.
+                            Plățile Stripe se transformă în facturi perfecte.
                         </h2>
                     </div>
                 </div>
@@ -25,23 +25,23 @@ function BeforeAfter() {
                     <div className='flex w-full sm:flex-1 flex-col items-center bg-primary-foreground rounded-2xl shadow-md py-12'>
                         <ul className="text-left font-medium flex flex-col items-center sm:items-start">
                             <div className="space-y-2 tracking-wide text-xl">
-                                <h3 className='font-bold'>Before</h3>
+                                <h3 className='font-bold'>Înainte</h3>
 
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    Endless manual invoicing
+                                    Facturare manuală nesfârșită
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    Error-prone data entry
+                                    Date copiate greșit
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    Chaotic billing process
+                                    Facturi emise cu întârziere
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <X className="h-4 w-4 shrink-0 text-red-500" />
-                                    Distractions from core work
+                                    Distracție de la taskuri importante
                                 </li>
                             </div>
                         </ul>
@@ -50,24 +50,24 @@ function BeforeAfter() {
                     <div className='flex w-full sm:flex-1 flex-col items-center bg-primary/10 rounded-2xl shadow-md py-12'>
                         <ul className="text-left font-medium flex flex-col items-center sm:items-start">
                             <div className="space-y-2 tracking-wide text-xl">
-                                <h3 className='font-bold'>After</h3>
+                                <h3 className='font-bold'>După</h3>
 
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    Fully automated stripe invoicing
+                                    Facturare Stripe automatizată
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    Instant SmartBill conversion
+                                    Conversie instantanee în SmartBill
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    Error-free, compliant invoices
+                                    Facturi fără erori
 
                                 </li>
                                 <li className="flex gap-1.5 items-center text-left">
                                     <Check className="h-4 w-4 shrink-0 text-green-600" />
-                                    More time for what truly matters
+                                    Mai mult timp pentru ceea ce contează 
                                 </li>
                             </div>
                         </ul>

@@ -15,8 +15,8 @@ export const formatPrice = (price) => {
 };
 
 export function constructMetadata({
-  title = "Your App",
-  description = "Your app desription goes here",
+  title = "Facturio.app",
+  description = "Transformă plățile Stripe în facturi SmartBill—Instantaneu!",
   image = "/openGraph.png",
   icons = "/favicon.ico",
 } = {}) {
