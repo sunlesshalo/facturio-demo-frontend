@@ -46,8 +46,8 @@ function EarlyAdopterSection() {
                     Terms of Service
                 </Link>.
             </p>
-            <div className="flex justify-center mt-8">
-              <div className="flex justify-center mt-8">
+            <div className="flex justify-center mt-2">
+              <div className="flex justify-center mt-4">
                 <button
                   onClick={() => window.open("https://buy.stripe.com/14k14lfLY03V7Cg4gs", "_blank")}
                   className={cn(buttonVariants({ size: 'lg' }), "flex items-center justify-center group")}
