@@ -130,10 +130,9 @@ function DemoSection() {
             {/* Instructions Accordion */}
             <details className="mb-8 bg-white rounded-lg">
               <summary className="cursor-pointer font-bold text-xl p-4 hover:bg-gray-50">
-                Încearcă demo-ul
+                Cum funcționează demo-ul?
               </summary>
               <div className="p-4 text-gray-700 text-sm leading-relaxed border-t">
-                <p className="font-semibold">Cum funcționează demo-ul?</p>
                 <p className="mt-2"><span className="font-semibold">Conectează-ți contul SmartBill:</span></p>
                 <ul className="list-disc pl-5">
                   <li>Introduce numele tău de utilizator SmartBill (e-mail), token-ul și CUI-ul.</li>
@@ -146,7 +145,7 @@ function DemoSection() {
                   <li>Dacă există mai multe serii, va trebui să alegi seria dorită din meniul derulant.
 </li>
                 </ul>
-                <p className="mt-2"><span className="font-semibold">Executarea testului::</span></p>
+                <p className="mt-2"><span className="font-semibold">Executarea testului:</span></p>
                 <ul className="list-disc pl-5">
                   <li>Dă clic pe 'Execută test' pentru a porni demo-ul.</li>
                   <li>Vei fi redirecționat către o pagină de plată test pe Stripe (nu se transferă bani reali).</li>
