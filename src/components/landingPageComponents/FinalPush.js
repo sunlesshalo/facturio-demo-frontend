@@ -26,7 +26,7 @@ function FinalPush() {
                         target="_blank"
                         className={cn(buttonVariants({ size: "lg" }), "flex items-center justify-center group px-4")}
                       >
-                        <span>Alătură-te programului Early Adopter</span>
+                        <span>Devino Early Adopter</span>
                         <ArrowRight className="ml-1.5 transform h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </Link>
                     </div>
